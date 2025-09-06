@@ -1,5 +1,5 @@
 # Simple goddess.ai Chatbot - Hello World Version
-from openai import OpenAI
+import openai
 from flask import Flask, request, jsonify, render_template_string
 from personality_manager import GoddessPersonality
 import os
@@ -11,7 +11,7 @@ personality = GoddessPersonality(os.path.join(os.path.dirname(__file__), 'person
 # Load API key from config
 with open(os.path.join(os.path.dirname(__file__), 'config.json')) as f:
     config = json.load(f)
-client = OpenAI(api_key=config['api_key'])
+openai.api_key = config['api_key']
 
 @app.route('/')
 def home():
@@ -126,7 +126,7 @@ def chat():
             if message_analysis.get('needs_gesture') and message_analysis.get('suggested_gesture'):
                 system_prompt += f"\n\nConsider using this gesture: {message_analysis['suggested_gesture']}"
             
-            response = client.chat.completions.create(
+            response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": system_prompt},
@@ -134,7 +134,7 @@ def chat():
                 ]
             )
             
-            ai_response = response.choices[0].message.content
+            ai_response = response.choices[0].message['content']
             print(f"AI Response: {ai_response}")  # Debug log
             return jsonify({"response": ai_response})
             

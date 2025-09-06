@@ -27,6 +27,9 @@ Critical issue with state management and version control in AI-IDE integration, 
 - Confusion between pre-change and post-change states
 - Corrupted file content where old and new code merge incorrectly
 - Example observed: `const puppeteer = r` merging with existing try block
+- OneDrive sync states causing file read inconsistencies
+- ReparsePoint attributes affecting file accessibility
+- Race conditions between VS Code, OneDrive, and Python file operations
 
 ### 2. Version Control Conflicts
 - System appears to track changes similar to git
@@ -95,6 +98,20 @@ const puppeteer = r    try {  // Corrupted state example
 - No clear mechanism for state resolution
 - Tool responses indicate awareness of corruption (failing safely)
 
+## Cloud Storage Integration Issues
+
+### 1. OneDrive Sync Behaviors
+- Files with ReparsePoint attribute require special handling
+- VS Code file operations may conflict with sync states
+- Python file operations may fail during sync
+- PowerShell commands may succeed while other operations fail
+
+### 2. Sync State Resolution
+- Force save (Ctrl+S) can resolve sync states
+- Wait periods may be necessary between operations
+- File accessibility varies by access method
+- Race conditions common between different file operations
+
 ## Workaround Protocols
 
 ### 1. Single Change Protocol
@@ -129,6 +146,28 @@ b) Interaction Protocol:
    - Continue working through lag periods
    - Use documentation as context anchor
    - Accept some precision loss for continuity
+
+## Session Management Guidelines
+
+### 1. New Session Initialization
+- Force save all files before ending previous session
+- Verify OneDrive sync completion before operations
+- Check ReparsePoint attributes on critical files
+- Use PowerShell commands to validate file states
+- Wait for sync completion after VS Code operations
+
+### 2. File Operation Sequence
+1. Save all files (Ctrl+S)
+2. Wait for OneDrive sync
+3. Verify file content with PowerShell
+4. Proceed with Python operations
+5. Validate results before continuing
+
+### 3. Error Recovery Protocol
+- Use PowerShell to verify file existence and content
+- Force save in VS Code if sync issues detected
+- Consider local workspace copies for development
+- Implement file state verification between operations
 
 ## Recommendations
 1. System Architecture:
