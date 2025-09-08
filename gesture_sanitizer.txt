@@ -1,0 +1,27 @@
+    def _sanitize_gesture(self, gesture: str) -> str:
+        """Ensure gesture is wrapped in single asterisks, no double or trailing asterisks."""
+        gesture = gesture.strip()
+        if not gesture:
+            return ''
+        # Remove leading/trailing asterisks
+        gesture = gesture.strip('*').strip()
+        return f"*{gesture}*"
+
+    def _suggest_appropriate_gesture(self, style: str) -> str:
+        """Suggest a gesture that hasn't been used recently, sanitized with asterisks."""
+        gestures = self.conversation_style.get('gestures', {})
+        if not gestures:
+            return ""
+        if style == 'poetic':
+            possible = gestures.get('subtle', [])
+        elif style == 'energetic':
+            possible = gestures.get('engaged', [])
+        else:
+            possible = gestures.get('dismissive', [])
+        # Filter out recently used gestures
+        available = [g for g in possible if g not in self.last_gestures]
+        if not available:
+            return ""
+        gesture = random.choice(available)
+        self.last_gestures = (self.last_gestures + [gesture])[-3:]  # Keep last 3
+        return self._sanitize_gesture(gesture)

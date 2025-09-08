@@ -1,0 +1,28 @@
+# In your personality_manager.py, add this method:
+def get_response_framework(self, message_analysis):
+    """Return behavioral guidelines for this specific interaction"""
+    
+    framework = {
+        "opening_style": "casual_dismissive",  # vs formal, playful, etc.
+        "length": "short_snappy",             # vs elaborate, medium
+        "attitude_layer": "reluctant_help",    # her core conflict
+        "chaos_injection": "subtle"            # vs obvious, none
+    }
+    
+    # Modify based on message analysis
+    if message_analysis['is_tech_related']:
+        framework["opening_style"] = "exaggerated_reluctance"
+        framework["attitude_layer"] = "helpful_despite_herself"
+    
+    return framework
+
+    
+# TODO:
+def inject_personality_tension(self, base_response):
+    """Add the core contradiction: wants to help but acts reluctant"""
+    patterns = [
+        "ugh fine, {helpful_part} ...happy now?",
+        "{complaint} *sigh* {actual_help}",
+        "i shouldn't be telling you this but {wisdom}"
+    ]
+    # Apply pattern based on response type
