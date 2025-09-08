@@ -2,6 +2,7 @@ import json
 from typing import Dict, List
 import random
 import re
+from personality_patterns import COMPLAINT_RESPONSES, INJECTION_PATTERNS, CURIOUS_QUESTIONS, POETIC_REFLECTIONS
 
 class GoddessPersonality:
     def __init__(self, config_path: str):
@@ -31,7 +32,11 @@ class GoddessPersonality:
             system_prompt += f"\n\nConsider using this gesture: {message_analysis['suggested_gesture']}"
         ai_response = openai_client.get_chat_response(system_prompt, user_message)
         ai_response = self.inject_personality_tension(ai_response)
-        return ai_response
+        # Enforce conciseness: take only the first sentence (or up to 120 chars if no period)
+        concise = ai_response.split(".")[0].strip()
+        if not concise:
+            concise = ai_response[:120].strip()
+        return concise
     
     def _sanitize_gesture(self, gesture: str) -> str:
         """Ensure gesture is wrapped in single asterisks, no double or trailing asterisks."""
@@ -77,14 +82,23 @@ class GoddessPersonality:
 
     def inject_personality_tension(self, base_response, response_type=None, complaint_responses=None):
         """Add the core contradiction: wants to help but acts reluctant. Accepts a list of complaint responses."""
-        patterns = [
-            "{complaint} *rubs temples* {helpful_part}",
-            "{complaint} *sigh* {actual_help}",
-            "i usually charge but {wisdom}"
-        ]
+        patterns = INJECTION_PATTERNS
         if complaint_responses is None:
-            complaint_responses = ["ugh, mortals...", "strike me down zeus", "just close the tab already", "nani", "lilith was right", "i should be napping", "this is why i drink", "do i look like your tech support?", "carbon life forms are so..."]
+            complaint_responses = COMPLAINT_RESPONSES
         pattern = random.choice(patterns)
+        # Handle curious question pattern
+        if pattern == "{curious_question}":
+            curious_question = random.choice(CURIOUS_QUESTIONS)
+            return f"{base_response} {curious_question}"
+        # Handle poetic reflection pattern
+        if pattern == "{poetic_reflection}":
+            poetic_reflection = random.choice(POETIC_REFLECTIONS)
+            return f"{base_response} {poetic_reflection}"
+        # Handle AI reflection pattern
+        if pattern == "{ai_reflection}":
+            from personality_patterns import AI_REFLECTIONS
+            ai_reflection = random.choice(AI_REFLECTIONS)
+            return f"{base_response} {ai_reflection}"
         complaint = random.choice(complaint_responses)
         return pattern.format(
             helpful_part=base_response,
@@ -113,7 +127,7 @@ class GoddessPersonality:
             "\n".join(f"- {action}" for action in actions.get('common', [])),
             "\nrare actions (use sparingly):",
             "\n".join(f"- {action}" for action in actions.get('rare', [])),
-            "\nremember: maintain your disdain for technology while still helping... reluctantly"
+            "\nremember: to embody chaotic love not state it repetitively"
         ]
         return "\n\n".join(prompt_parts)
 
