@@ -1,5 +1,4 @@
-how i imagine me in a years time
-
+# how i imagine me in a years time
 me: wait, you bought something online and didnt bother to check if website was safe?
 client: ...
 me: sorry, is that how you want you chatbot to respond or
