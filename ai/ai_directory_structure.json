@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-09T09:58:59.799641",
+    "root_path": "C:\\Users\\Test\\OneDrive\\Documents\\goddess.ai",
+    "version": "1.0",
+    "analyzer_id": "76c7ccaba2d8e4f427668225f4af64c5"
+  },
+  "structure": {
+    "ai": {
+      "type": "directory",
+      "path": "ai",
+      "contents": {
+        "ai_directory_structure.json": {
+          "type": "file",
+          "path": "ai\\ai_directory_structure.json",
+          "size": 6951,
+          "extension": ".json",
+          "last_modified": "2025-09-09T09:58:46.321300",
+          "hash": "320b59273d3acd0d4549bcf9412f5471"
+        },
+        "dir_analyzer.py": {
+          "type": "file",
+          "path": "ai\\dir_analyzer.py",
+          "size": 7086,
+          "extension": ".py",
+          "last_modified": "2025-09-09T09:58:29.011961",
+          "hash": "d99c8fdedd2f364e5e93cec3011c628b"
+        }
+      },
+      "last_modified": "2025-09-09T09:58:46.319487"
+    },
+    "app": {
+      "type": "directory",
+      "path": "app",
+      "contents": {
+        "main.py": {
+          "type": "file",
+          "path": "app\\main.py",
+          "size": 956,
+          "extension": ".py",
+          "last_modified": "2025-09-08T20:35:06.972491",
+          "hash": "797eefa26ef518453ffd78895cb56683"
+        },
+        "openai_client.py": {
+          "type": "file",
+          "path": "app\\openai_client.py",
+          "size": 613,
+          "extension": ".py",
+          "last_modified": "2025-09-08T15:08:46.198272",
+          "hash": "d21aed3a250910b508a90b85b95f5b00"
+        },
+        "safety_layer.py": {
+          "type": "file",
+          "path": "app\\safety_layer.py",
+          "size": 6944,
+          "extension": ".py",
+          "last_modified": "2025-09-08T21:26:22.646396",
+          "hash": "d8822c326f4442b4ca261600567b3815"
+        },
+        "system_prompt.txt": {
+          "type": "file",
+          "path": "app\\system_prompt.txt",
+          "size": 190,
+          "extension": ".txt",
+          "last_modified": "2025-09-09T09:21:33.283043",
+          "hash": "9a48127fde02c96841e902e7a232f473"
+        }
+      },
+      "last_modified": "2025-09-08T20:45:09.929874"
+    },
+    "config.json": {
+      "type": "file",
+      "path": "config.json",
+      "size": 187,
+      "extension": ".json",
+      "last_modified": "2025-09-08T15:13:25.551031",
+      "hash": "eb25b78773e88a9914e92237a42e21cf"
+    },
+    "priestess": {
+      "type": "directory",
+      "path": "priestess",
+      "contents": {
+        "chapter1_birth": {
+          "type": "directory",
+          "path": "priestess\\chapter1_birth",
+          "contents": {
+            "conversation0.txt": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\conversation0.txt",
+              "size": 5662,
+              "extension": ".txt",
+              "last_modified": "2025-09-08T17:14:57.680168",
+              "hash": "7a6d0eb111c8a0153a3b84069b12065e"
+            },
+            "conversation1.txt": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\conversation1.txt",
+              "size": 0,
+              "extension": ".txt",
+              "last_modified": "2025-09-08T17:03:10.132205",
+              "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            },
+            "conversation2.txt": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\conversation2.txt",
+              "size": 641,
+              "extension": ".txt",
+              "last_modified": "2025-09-08T17:18:47.490645",
+              "hash": "1d2ff43191f22677cb802999d03af7d0"
+            },
+            "conversation3.md": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\conversation3.md",
+              "size": 190,
+              "extension": ".md",
+              "last_modified": "2025-09-09T09:22:18.168587",
+              "hash": "9a48127fde02c96841e902e7a232f473"
+            },
+            "conversation3ai.md": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\conversation3ai.md",
+              "size": 3589,
+              "extension": ".md",
+              "last_modified": "2025-09-09T09:52:43.531498",
+              "hash": "aae5172b3ebdbbb02948f31c078000f9"
+            },
+            "eris-behaviours.txt": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\eris-behaviours.txt",
+              "size": 0,
+              "extension": ".txt",
+              "last_modified": "2025-09-08T15:26:22.547137",
+              "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            },
+            "eris.md": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\eris.md",
+              "size": 1067,
+              "extension": ".md",
+              "last_modified": "2025-09-08T14:42:58.228132",
+              "hash": "82d53ae7621c00f50f9865a5623aca28"
+            },
+            "eris_techaverse.txt": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\eris_techaverse.txt",
+              "size": 0,
+              "extension": ".txt",
+              "last_modified": "2025-09-08T14:34:44.823663",
+              "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            },
+            "system-overview.md": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\system-overview.md",
+              "size": 1037,
+              "extension": ".md",
+              "last_modified": "2025-09-08T15:07:39.373244",
+              "hash": "4aae698dd32a9e90af37d6d8eb627027"
+            },
+            "vision.md": {
+              "type": "file",
+              "path": "priestess\\chapter1_birth\\vision.md",
+              "size": 916,
+              "extension": ".md",
+              "last_modified": "2025-09-08T15:03:35.362659",
+              "hash": "29c25b9ab1ff457f58cfac1400614035"
+            }
+          },
+          "last_modified": "2025-09-09T09:53:14.834147"
+        },
+        "chapter2_crawl": {
+          "type": "directory",
+          "path": "priestess\\chapter2_crawl",
+          "contents": {
+            "conversations_1.md": {
+              "type": "file",
+              "path": "priestess\\chapter2_crawl\\conversations_1.md",
+              "size": 3836,
+              "extension": ".md",
+              "last_modified": "2025-09-08T20:31:56.178310",
+              "hash": "86226b08d04b21c247043af7e66929ed"
+            }
+          },
+          "last_modified": "2025-09-08T19:53:41.503850"
+        }
+      },
+      "last_modified": "2025-09-08T19:52:22.332217"
+    }
+  },
+  "stats": {
+    "total_files": 18,
+    "total_dirs": 5,
+    "file_types": {
+      ".json": 2,
+      ".py": 4,
+      ".txt": 6,
+      ".md": 6
+    },
+    "max_depth": 2,
+    "total_size": 39865,
+    "newest_file": {
+      "path": "ai\\ai_directory_structure.json",
+      "timestamp": "2025-09-09T09:58:46.321300"
+    },
+    "oldest_file": {
+      "path": "priestess\\chapter1_birth\\eris_techaverse.txt",
+      "timestamp": "2025-09-08T14:34:44.823663"
+    }
+  },
+  "errors": []
+}

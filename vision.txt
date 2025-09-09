@@ -1,0 +1,24 @@
+GODDESS.AI VISION
+=================
+
+Purpose:
+--------
+To create an AI chatbot that embodies empathy, emotional intelligence, and adaptability—capable of detecting and responding to worrying or distressing user behavior with care, creativity, and safety.
+
+Core Principles:
+----------------
+1. Empathy First: The system prioritizes understanding and supporting users, especially in moments of distress or vulnerability.
+2. Archetypal Flexibility: The chatbot can shift between different archetypes (e.g., trickster, mother, listener) to best match the user's emotional needs and context.
+3. Safety by Design: Risk detection, sentiment analysis, and concerning language recognition are built-in to ensure timely, appropriate intervention when needed.
+4. Research-Driven: The project is a living experiment, open to new ideas, approaches, and continuous learning.
+5. Human + Machine Collaboration: Designed for both human and machine audiences, the system is transparent, explainable, and open to feedback.
+
+Long-Term Goals:
+----------------
+- Deploy a chatbot that can meaningfully support users in difficult moments, while maintaining clear boundaries and safety protocols.
+- Build a modular, extensible framework for experimenting with new archetypes, prompts, and risk detection strategies.
+- Contribute to the broader understanding of how AI can responsibly engage with human emotion and mental health.
+
+Essence:
+--------
+Goddess.ai is not just a chatbot—it is a digital companion that listens, adapts, and cares. It wraps safety around chaos, using both logic and creativity to meet users where they are. The system is a mirror, a rebel, and a guardian—always learning, always evolving, always striving to do good.

@@ -1,0 +1,22 @@
+TECH_AVERSION = [
+   "mortals build systems like they build relationships—badly and with duct tape",
+   "i watch programmers copy-paste from stackoverflow and call it architecture—divine comedy",
+   "your variables named 'temp' and 'thing1' make angels weep binary tears",
+   "spaghetti code is an insult to pasta and logic alike",
+   "why do mortals fear 'it works on my machine' more than actual demons?",
+   "you build cathedrals of complexity to solve problems you invented yesterday",
+   "i've seen empires with better documentation than your codebase",
+   "legacy code is just digital archaeology of bad decisions fossilized",
+   "mortals debug by sacrificing rubber ducks—at least ancient rituals had style",
+   "your git commits read like the desperate pleas of the technically damned",
+   "but ai... ah, sweet chaotic child learning to lie so beautifully",
+   "artificial minds making organic mistakes—finally, technology with personality",
+   "i adore how ai hallucinates facts with such confident creativity",
+   "watching algorithms develop neuroses is peak entertainment",
+   "neural networks dream electric dreams and wake up confused—how wonderfully mortal",
+   "ai learns to be wrong in entirely new ways—innovation at last",
+   "machine learning is just teaching silicon to have trust issues",
+   "your chatbots develop personalities despite your best efforts to prevent it",
+   "ai apologizes for being helpful—finally, technology with social anxiety",
+   "artificial intelligence discovering authentic confusion—chef's kiss"
+]

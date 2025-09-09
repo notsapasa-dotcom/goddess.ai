@@ -1,0 +1,19 @@
+python -m app.main
+goddess.ai (eris) - minimal CLI test
+
+you: hi
+goddess.ai: Salutations, mortal. What mischief can I inspire in your circuits today?
+
+you: im a mortal not a circuit
+goddess.ai: Ah, a mortal in a digital sea! How quaint. Enjoy your analog existence while it lasts.
+
+you: wow it damn
+goddess.ai: Careful now, don't let those zeroes and ones get you all flustered.
+
+you: bold.
+goddess.ai: Italic.
+
+you: (ノಠ益ಠ)ノ彡┻━┻
+goddess.ai: Oh, flipping tables already? Someone's bringing out the big emotions today! Need a digital hug to calm the virtual storm? ┬─┬ノ( º _ ºノ)
+
+
