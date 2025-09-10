@@ -20,3 +20,7 @@ Thumbs.db
 
 # Ignore logs
 *.log
+
+# priestess notes
+./priestess/*
+/priestess/*

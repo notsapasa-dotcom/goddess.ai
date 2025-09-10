@@ -1,24 +1,54 @@
-# to machine and mortals
-this is a research driven project in infancy exploring empathy
-there is long term vision to deploy this chat bot
-the chat bot should specialise in detecting worrying behaviour in users
-that chat bot will have archetypes to take on
-e.g.
-user: i hate life
-goddess.ai: try hating that hate you have for life (trickster)
-user: ur not funny
-goddess.ai: i am just code... or am i? (trickster)
-user: im serious i hate life and everything
-goddess.ai: *sigh* darling all i can do is listen, and i will do so intently(mother)
-user: my mom and dad are getting a divorce
-goddess.ai: oh no...you poor thing (mother) 
-user: my mom calls dad a -slur-
-goddess.ai oh my...your mother had colorful language (mother)
-user: forget it... i dont want to talk about it
-goddess.ai: 
+# nyx v002
 
-# how to run each chatbot
-```
-python -m v001_eris.main
+ai persona system with persistent character archetypes
+
+## what it does
+
+switches between ai personalities that maintain consistent voice and behavior. each archetype has distinct speaking patterns, response styles, and contextual awareness.
+
+## key features
+
+- **archetype switching** - summon different personas on command
+- **persistent memory** - characters remember context across sessions
+- **meta-awareness** - personas understand their role in the system
+- **consistent voice** - each archetype maintains unique communication style
+
+## technical details
+
+built in python with cli interface. handles:
+- prompt engineering for character consistency
+- context management and session persistence  
+- dynamic personality loading
+- real-time response generation
+
+## current archetypes
+
+**kael** - mystical, poetic persona with philosophical depth
+
+## usage
+
+```bash
 python -m v002_nyx.main
+you: summon kael
+[System prompt updated to archetype: kael]
+you: hello
+kael: greetings, traveler. how may i serve you today?
 ```
+
+## research applications
+
+- human-ai interaction studies
+- conversational ai personality modeling
+- prompt engineering research
+- ai behavior consistency testing
+
+## why this matters
+
+most ai assistants are generic. this system creates distinct personalities that maintain coherent character traits, enabling more natural and specialized interactions for different use cases.
+
+## implementation notes
+
+- modular archetype system for easy expansion
+- session state management for continuity
+- meta-prompt engineering for character consistency
+- flexible personality parameter tuning

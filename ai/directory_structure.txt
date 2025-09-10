@@ -1,0 +1,33 @@
+GODDESS.AI PROJECT STRUCTURE
+==============================
+Generated on: C:/Users/Test/OneDrive/Documents/goddess.ai
+==============================
+
+📁 goddess.ai
+📁 ai
+│   │   └── 📄 dir_tree.py
+📁 app
+│   │   ├── 📄 main.py
+│   │   ├── 📄 openai_client.py
+│   │   └── 📄 safety_layer.py
+│   │   ├── 📄 system_prompt.txt
+📁 priestess
+│   │   ├── 📁 chapter1_birth
+│   │   │   │   ├── 📄 conversation0.txt
+│   │   │   │   ├── 📄 conversation1.txt
+│   │   │   │   ├── 📄 conversation2.txt
+│   │   │   │   ├── 📄 conversation3.md
+│   │   │   │   ├── 📄 conversation3ai.md
+│   │   │   │   ├── 📄 eris-behaviours.txt
+│   │   │   │   ├── 📄 eris.md
+│   │   │   │   ├── 📄 eris_techaverse.txt
+│   │   │   │   ├── 📄 system-overview.md
+│   │   │   │   └── 📄 vision.md
+│   │   └── 📁 chapter2_crawl
+│       │       └── 📄 conversations_1.md
+📄 config.json
+📄 dir_tree.py
+
+Legend:
+📁 - Directory
+📄 - File
