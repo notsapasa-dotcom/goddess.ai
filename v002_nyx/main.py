@@ -51,22 +51,28 @@ def main():
         # Summon archetype logic
         if user_message.lower().startswith("summon "):
             archetype = user_message[7:].strip().lower()
-            prompt = get_system_prompt(archetype)
-            if prompt:
-                current_archetype = archetype
-                system_prompt = prompt
-                print(f"[System prompt updated to archetype: {archetype}]")
-            else:
-                print(f"[Archetype '{archetype}' not found. Using default system prompt.]")
+            if archetype == "sa":
+                # Always use default system prompt for 'sa'
                 current_archetype = None
                 system_prompt = get_system_prompt()
+                print(f"[Archetype 'sa' uses default system prompt.]")
+            else:
+                prompt = get_system_prompt(archetype)
+                if prompt:
+                    current_archetype = archetype
+                    system_prompt = prompt
+                    print(f"[System prompt updated to archetype: {archetype}]")
+                else:
+                    print(f"[Archetype '{archetype}' not found. Using default system prompt.]")
+                    current_archetype = None
+                    system_prompt = get_system_prompt()
             # Reset conversation with new system prompt
             messages = [{"role": "system", "content": system_prompt}]
             continue
 
         messages.append({"role": "user", "content": user_message})
         response = get_response(api_key, messages)
-        display_name = current_archetype if current_archetype else "?"
+        display_name = current_archetype if current_archetype else "sa"
         print(f"{display_name}: {response}\n")
         messages.append({"role": "developer", "content": response})
 
