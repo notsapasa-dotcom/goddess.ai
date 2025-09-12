@@ -72,9 +72,9 @@ def main():
 
         messages.append({"role": "user", "content": user_message})
         response = get_response(api_key, messages)
-        display_name = current_archetype if current_archetype else "sa"
+        display_name = current_archetype if current_archetype else "?"
         print(f"{display_name}: {response}\n")
-        messages.append({"role": "developer", "content": response})
+        messages.append({"role": "assistant", "content": response})
 
 if __name__ == "__main__":
     main()
